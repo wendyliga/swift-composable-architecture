@@ -74,26 +74,20 @@ the <code>scope</code> method to derive more focused stores that can be passed t
   <tbody>
     <tr>
     <th>initial​State</th>
-    <td><code class="type">State</code></td></td>
-    <td><ul>
-<li>initialState: The state to start the application in.</li>
-</ul>
+    <td><code class="type">State</code></td>
+    <td><p>The state to start the application in.</p>
 </td>
 </tr>
 <tr>
     <th>reducer</th>
-    <td><code class="type">Reducer&lt;State, Action, Environment&gt;</code></td></td>
-    <td><ul>
-<li>reducer: The reducer that powers the business logic of the application.</li>
-</ul>
+    <td><code class="type">Reducer&lt;State, Action, Environment&gt;</code></td>
+    <td><p>The reducer that powers the business logic of the application.</p>
 </td>
 </tr>
 <tr>
     <th>environment</th>
-    <td><code class="type">Environment</code></td></td>
-    <td><ul>
-<li>environment: The environment of dependencies for the application.</li>
-</ul>
+    <td><code class="type">Environment</code></td>
+    <td><p>The environment of dependencies for the application.</p>
 </td>
 </tr>
   </tbody>
@@ -169,18 +163,14 @@ example:</p>
   <tbody>
     <tr>
     <th>to​Local​State</th>
-    <td><code class="type">@escaping (State) -&gt; Local​State</code></td></td>
-    <td><ul>
-<li>toLocalState: A function that transforms <code>State</code> into <code>LocalState</code>.</li>
-</ul>
+    <td><code class="type">@escaping (State) -&gt; Local​State</code></td>
+    <td><p>A function that transforms <code>State</code> into <code>LocalState</code>.</p>
 </td>
 </tr>
 <tr>
     <th>from​Local​Action</th>
-    <td><code class="type">@escaping (Local​Action) -&gt; Action</code></td></td>
-    <td><ul>
-<li>fromLocalAction: A function that transforms <code>LocalAction</code> into <code>Action</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Local​Action) -&gt; Action</code></td>
+    <td><p>A function that transforms <code>LocalAction</code> into <code>Action</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -211,10 +201,8 @@ example:</p>
   <tbody>
     <tr>
     <th>to​Local​State</th>
-    <td><code class="type">@escaping (State) -&gt; Local​State</code></td></td>
-    <td><ul>
-<li>toLocalState: A function that transforms <code>State</code> into <code>LocalState</code>.</li>
-</ul>
+    <td><code class="type">@escaping (State) -&gt; Local​State</code></td>
+    <td><p>A function that transforms <code>State</code> into <code>LocalState</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -245,18 +233,14 @@ example:</p>
   <tbody>
     <tr>
     <th>to​Local​State</th>
-    <td><code class="type">@escaping (Any​Publisher&lt;State, Never&gt;) -&gt; P</code></td></td>
-    <td><ul>
-<li>toLocalState: A function that transforms a publisher of <code>State</code> into a publisher of <code>LocalState</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Any​Publisher&lt;State, Never&gt;) -&gt; P</code></td>
+    <td><p>A function that transforms a publisher of <code>State</code> into a publisher of <code>LocalState</code>.</p>
 </td>
 </tr>
 <tr>
     <th>from​Local​Action</th>
-    <td><code class="type">@escaping (Local​Action) -&gt; Action</code></td></td>
-    <td><ul>
-<li>fromLocalAction: A function that transforms <code>LocalAction</code> into <code>Action</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Local​Action) -&gt; Action</code></td>
+    <td><p>A function that transforms <code>LocalAction</code> into <code>Action</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -287,10 +271,8 @@ example:</p>
   <tbody>
     <tr>
     <th>to​Local​State</th>
-    <td><code class="type">@escaping (Any​Publisher&lt;State, Never&gt;) -&gt; P</code></td></td>
-    <td><ul>
-<li>toLocalState: A function that transforms a publisher of <code>State</code> into a publisher of <code>LocalState</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Any​Publisher&lt;State, Never&gt;) -&gt; P</code></td>
+    <td><p>A function that transforms a publisher of <code>State</code> into a publisher of <code>LocalState</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -353,18 +335,14 @@ whose domain has been scoped to just that feature:</p>
   <tbody>
     <tr>
     <th>unwrap</th>
-    <td><code class="type">@escaping (Store&lt;Wrapped, Action&gt;) -&gt; Void</code></td></td>
-    <td><ul>
-<li>unwrap: A function that is called with a store of non-optional state whenever the store's optional state goes from <code>nil</code> to non-<code>nil</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Store&lt;Wrapped, Action&gt;) -&gt; Void</code></td>
+    <td><p>A function that is called with a store of non-optional state whenever the store's optional state goes from <code>nil</code> to non-<code>nil</code>.</p>
 </td>
 </tr>
 <tr>
     <th>else</th>
-    <td><code class="type">@escaping () -&gt; Void</code></td></td>
-    <td><ul>
-<li>else: A function that is called whenever the store's optional state goes from non-<code>nil</code> to <code>nil</code>.</li>
-</ul>
+    <td><code class="type">@escaping () -&gt; Void</code></td>
+    <td><p>A function that is called whenever the store's optional state goes from non-<code>nil</code> to <code>nil</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -396,10 +374,8 @@ case.</p>
   <tbody>
     <tr>
     <th>unwrap</th>
-    <td><code class="type">@escaping (Store&lt;Wrapped, Action&gt;) -&gt; Void</code></td></td>
-    <td><ul>
-<li>unwrap: A function that is called with a store of non-optional state whenever the store's optional state goes from <code>nil</code> to non-<code>nil</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Store&lt;Wrapped, Action&gt;) -&gt; Void</code></td>
+    <td><p>A function that is called with a store of non-optional state whenever the store's optional state goes from <code>nil</code> to non-<code>nil</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -417,7 +393,7 @@ case.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-07-29T15:46:33+0000">July 29, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+    Generated on <time datetime="2020-08-10T19:03:04+0000">August 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>

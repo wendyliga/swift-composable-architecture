@@ -116,10 +116,8 @@ no effect needs to be executed, a <code>.none</code> effect can be returned.</p>
   <tbody>
     <tr>
     <th>reducer</th>
-    <td><code class="type">@escaping (inout State, Action, Environment) -&gt; Effect&lt;Action, Never&gt;</code></td></td>
-    <td><ul>
-<li>reducer: A function signature that takes state, action and environment.</li>
-</ul>
+    <td><code class="type">@escaping (inout State, Action, Environment) -&gt; Effect&lt;Action, Never&gt;</code></td>
+    <td><p>A function signature that takes state, action and environment.</p>
 </td>
 </tr>
   </tbody>
@@ -177,18 +175,14 @@ no effect needs to be executed, a <code>.none</code> effect can be returned.</p>
   <tbody>
     <tr>
     <th>prefix</th>
-    <td><code class="type">String</code></td></td>
-    <td><ul>
-<li>prefix: A string with which to prefix all debug messages.</li>
-</ul>
+    <td><code class="type">String</code></td>
+    <td><p>A string with which to prefix all debug messages.</p>
 </td>
 </tr>
 <tr>
     <th>to​Debug​Environment</th>
-    <td><code class="type">@escaping (Environment) -&gt; Debug​Environment</code></td></td>
-    <td><ul>
-<li>toDebugEnvironment: A function that transforms an environment into a debug environment by describing a print function and a queue to print from. Defaults to a function that ignores the environment and returns a default <code>DebugEnvironment</code> that uses Swift's <code>print</code> function and a background queue.</li>
-</ul>
+    <td><code class="type">@escaping (Environment) -&gt; Debug​Environment</code></td>
+    <td><p>A function that transforms an environment into a debug environment by describing a print function and a queue to print from. Defaults to a function that ignores the environment and returns a default <code>DebugEnvironment</code> that uses Swift's <code>print</code> function and a background queue.</p>
 </td>
 </tr>
   </tbody>
@@ -225,18 +219,14 @@ no effect needs to be executed, a <code>.none</code> effect can be returned.</p>
   <tbody>
     <tr>
     <th>prefix</th>
-    <td><code class="type">String</code></td></td>
-    <td><ul>
-<li>prefix: A string with which to prefix all debug messages.</li>
-</ul>
+    <td><code class="type">String</code></td>
+    <td><p>A string with which to prefix all debug messages.</p>
 </td>
 </tr>
 <tr>
     <th>to​Debug​Environment</th>
-    <td><code class="type">@escaping (Environment) -&gt; Debug​Environment</code></td></td>
-    <td><ul>
-<li>toDebugEnvironment: A function that transforms an environment into a debug environment by describing a print function and a queue to print from. Defaults to a function that ignores the environment and returns a default <code>DebugEnvironment</code> that uses Swift's <code>print</code> function and a background queue.</li>
-</ul>
+    <td><code class="type">@escaping (Environment) -&gt; Debug​Environment</code></td>
+    <td><p>A function that transforms an environment into a debug environment by describing a print function and a queue to print from. Defaults to a function that ignores the environment and returns a default <code>DebugEnvironment</code> that uses Swift's <code>print</code> function and a background queue.</p>
 </td>
 </tr>
   </tbody>
@@ -273,34 +263,26 @@ no effect needs to be executed, a <code>.none</code> effect can be returned.</p>
   <tbody>
     <tr>
     <th>prefix</th>
-    <td><code class="type">String</code></td></td>
-    <td><ul>
-<li>prefix: A string with which to prefix all debug messages.</li>
-</ul>
+    <td><code class="type">String</code></td>
+    <td><p>A string with which to prefix all debug messages.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​State</th>
-    <td><code class="type">@escaping (State) -&gt; Local​State</code></td></td>
-    <td><ul>
-<li>toLocalState: A function that filters state to be printed.</li>
-</ul>
+    <td><code class="type">@escaping (State) -&gt; Local​State</code></td>
+    <td><p>A function that filters state to be printed.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Action</th>
-    <td><code class="type">Case​Path&lt;Action, Local​Action&gt;</code></td></td>
-    <td><ul>
-<li>toLocalAction: A case path that filters actions that are printed.</li>
-</ul>
+    <td><code class="type">Case​Path&lt;Action, Local​Action&gt;</code></td>
+    <td><p>A case path that filters actions that are printed.</p>
 </td>
 </tr>
 <tr>
     <th>to​Debug​Environment</th>
-    <td><code class="type">@escaping (Environment) -&gt; Debug​Environment</code></td></td>
-    <td><ul>
-<li>toDebugEnvironment: A function that transforms an environment into a debug environment by describing a print function and a queue to print from. Defaults to a function that ignores the environment and returns a default <code>DebugEnvironment</code> that uses Swift's <code>print</code> function and a background queue.</li>
-</ul>
+    <td><code class="type">@escaping (Environment) -&gt; Debug​Environment</code></td>
+    <td><p>A function that transforms an environment into a debug environment by describing a print function and a queue to print from. Defaults to a function that ignores the environment and returns a default <code>DebugEnvironment</code> that uses Swift's <code>print</code> function and a background queue.</p>
 </td>
 </tr>
   </tbody>
@@ -349,18 +331,14 @@ effect never completed.</p>
   <tbody>
     <tr>
     <th>prefix</th>
-    <td><code class="type">String</code></td></td>
-    <td><ul>
-<li>prefix: A string to print at the beginning of the formatted message for the signpost.</li>
-</ul>
+    <td><code class="type">String</code></td>
+    <td><p>A string to print at the beginning of the formatted message for the signpost.</p>
 </td>
 </tr>
 <tr>
     <th>log</th>
-    <td><code class="type">OSLog</code></td></td>
-    <td><ul>
-<li>log: An <code>OSLog</code> to use for signposts.</li>
-</ul>
+    <td><code class="type">OSLog</code></td>
+    <td><p>An <code>OSLog</code> to use for signposts.</p>
 </td>
 </tr>
   </tbody>
@@ -459,10 +437,8 @@ order from child to parent domain.</p>
   <tbody>
     <tr>
     <th>reducers</th>
-    <td><code class="type">Reducer</code></td></td>
-    <td><ul>
-<li>reducers: A list of reducers.</li>
-</ul>
+    <td><code class="type">Reducer</code></td>
+    <td><p>A list of reducers.</p>
 </td>
 </tr>
   </tbody>
@@ -537,10 +513,8 @@ order from child to parent domain.</p>
   <tbody>
     <tr>
     <th>reducers</th>
-    <td><code class="type">[Reducer]</code></td></td>
-    <td><ul>
-<li>reducers: An array of reducers.</li>
-</ul>
+    <td><code class="type">[Reducer]</code></td>
+    <td><p>An array of reducers.</p>
 </td>
 </tr>
   </tbody>
@@ -618,10 +592,8 @@ order from child to parent domain.</p>
   <tbody>
     <tr>
     <th>other</th>
-    <td><code class="type">Reducer</code></td></td>
-    <td><ul>
-<li>other: Another reducer.</li>
-</ul>
+    <td><code class="type">Reducer</code></td>
+    <td><p>Another reducer.</p>
 </td>
 </tr>
   </tbody>
@@ -691,26 +663,20 @@ then <em>pull them back</em> and <em>combine</em> them into one big reducer that
   <tbody>
     <tr>
     <th>to​Local​State</th>
-    <td><code class="type">Writable​Key​Path&lt;Global​State, State&gt;</code></td></td>
-    <td><ul>
-<li>toLocalState: A key path that can get/set <code>State</code> inside <code>GlobalState</code>.</li>
-</ul>
+    <td><code class="type">Writable​Key​Path&lt;Global​State, State&gt;</code></td>
+    <td><p>A key path that can get/set <code>State</code> inside <code>GlobalState</code>.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Action</th>
-    <td><code class="type">Case​Path&lt;Global​Action, Action&gt;</code></td></td>
-    <td><ul>
-<li>toLocalAction: A case path that can extract/embed <code>Action</code> from <code>GlobalAction</code>.</li>
-</ul>
+    <td><code class="type">Case​Path&lt;Global​Action, Action&gt;</code></td>
+    <td><p>A case path that can extract/embed <code>Action</code> from <code>GlobalAction</code>.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Environment</th>
-    <td><code class="type">@escaping (Global​Environment) -&gt; Environment</code></td></td>
-    <td><ul>
-<li>toLocalEnvironment: A function that transforms <code>GlobalEnvironment</code> into <code>Environment</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Global​Environment) -&gt; Environment</code></td>
+    <td><p>A function that transforms <code>GlobalEnvironment</code> into <code>Environment</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -821,26 +787,20 @@ combine <code>forEach</code> reducers <em>before</em> parent reducers that can m
   <tbody>
     <tr>
     <th>to​Local​State</th>
-    <td><code class="type">Writable​Key​Path&lt;Global​State, [State]&gt;</code></td></td>
-    <td><ul>
-<li>toLocalState: A key path that can get/set an array of <code>State</code> elements inside. <code>GlobalState</code>.</li>
-</ul>
+    <td><code class="type">Writable​Key​Path&lt;Global​State, [State]&gt;</code></td>
+    <td><p>A key path that can get/set an array of <code>State</code> elements inside. <code>GlobalState</code>.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Action</th>
-    <td><code class="type">Case​Path&lt;Global​Action, (Int, Action)&gt;</code></td></td>
-    <td><ul>
-<li>toLocalAction: A case path that can extract/embed <code>(Int, Action)</code> from <code>GlobalAction</code>.</li>
-</ul>
+    <td><code class="type">Case​Path&lt;Global​Action, (Int, Action)&gt;</code></td>
+    <td><p>A case path that can extract/embed <code>(Int, Action)</code> from <code>GlobalAction</code>.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Environment</th>
-    <td><code class="type">@escaping (Global​Environment) -&gt; Environment</code></td></td>
-    <td><ul>
-<li>toLocalEnvironment: A function that transforms <code>GlobalEnvironment</code> into <code>Environment</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Global​Environment) -&gt; Environment</code></td>
+    <td><p>A function that transforms <code>GlobalEnvironment</code> into <code>Environment</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -897,26 +857,20 @@ combine <code>forEach</code> reducers <em>before</em> parent reducers that can m
   <tbody>
     <tr>
     <th>to​Local​State</th>
-    <td><code class="type">Writable​Key​Path&lt;Global​State, Identified​Array&lt;ID, State&gt;&gt;</code></td></td>
-    <td><ul>
-<li>toLocalState: A key path that can get/set a collection of <code>State</code> elements inside <code>GlobalState</code>.</li>
-</ul>
+    <td><code class="type">Writable​Key​Path&lt;Global​State, Identified​Array&lt;ID, State&gt;&gt;</code></td>
+    <td><p>A key path that can get/set a collection of <code>State</code> elements inside <code>GlobalState</code>.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Action</th>
-    <td><code class="type">Case​Path&lt;Global​Action, (ID, Action)&gt;</code></td></td>
-    <td><ul>
-<li>toLocalAction: A case path that can extract/embed <code>(Collection.Index, Action)</code> from <code>GlobalAction</code>.</li>
-</ul>
+    <td><code class="type">Case​Path&lt;Global​Action, (ID, Action)&gt;</code></td>
+    <td><p>A case path that can extract/embed <code>(Collection.Index, Action)</code> from <code>GlobalAction</code>.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Environment</th>
-    <td><code class="type">@escaping (Global​Environment) -&gt; Environment</code></td></td>
-    <td><ul>
-<li>toLocalEnvironment: A function that transforms <code>GlobalEnvironment</code> into <code>Environment</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Global​Environment) -&gt; Environment</code></td>
+    <td><p>A function that transforms <code>GlobalEnvironment</code> into <code>Environment</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -953,26 +907,20 @@ combine <code>forEach</code> reducers <em>before</em> parent reducers that can m
   <tbody>
     <tr>
     <th>to​Local​State</th>
-    <td><code class="type">Writable​Key​Path&lt;Global​State, [Key:​ State]&gt;</code></td></td>
-    <td><ul>
-<li>toLocalState: A key path that can get/set a dictionary of <code>State</code> values inside <code>GlobalState</code>.</li>
-</ul>
+    <td><code class="type">Writable​Key​Path&lt;Global​State, [Key:​ State]&gt;</code></td>
+    <td><p>A key path that can get/set a dictionary of <code>State</code> values inside <code>GlobalState</code>.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Action</th>
-    <td><code class="type">Case​Path&lt;Global​Action, (Key, Action)&gt;</code></td></td>
-    <td><ul>
-<li>toLocalAction: A case path that can extract/embed <code>(Key, Action)</code> from <code>GlobalAction</code>.</li>
-</ul>
+    <td><code class="type">Case​Path&lt;Global​Action, (Key, Action)&gt;</code></td>
+    <td><p>A case path that can extract/embed <code>(Key, Action)</code> from <code>GlobalAction</code>.</p>
 </td>
 </tr>
 <tr>
     <th>to​Local​Environment</th>
-    <td><code class="type">@escaping (Global​Environment) -&gt; Environment</code></td></td>
-    <td><ul>
-<li>toLocalEnvironment: A function that transforms <code>GlobalEnvironment</code> into <code>Environment</code>.</li>
-</ul>
+    <td><code class="type">@escaping (Global​Environment) -&gt; Environment</code></td>
+    <td><p>A function that transforms <code>GlobalEnvironment</code> into <code>Environment</code>.</p>
 </td>
 </tr>
   </tbody>
@@ -1003,26 +951,20 @@ combine <code>forEach</code> reducers <em>before</em> parent reducers that can m
   <tbody>
     <tr>
     <th>state</th>
-    <td><code class="type">inout State</code></td></td>
-    <td><ul>
-<li>state: Mutable state.</li>
-</ul>
+    <td><code class="type">inout State</code></td>
+    <td><p>Mutable state.</p>
 </td>
 </tr>
 <tr>
     <th>action</th>
-    <td><code class="type">Action</code></td></td>
-    <td><ul>
-<li>action: An action.</li>
-</ul>
+    <td><code class="type">Action</code></td>
+    <td><p>An action.</p>
 </td>
 </tr>
 <tr>
     <th>environment</th>
-    <td><code class="type">Environment</code></td></td>
-    <td><ul>
-<li>environment: An environment.</li>
-</ul>
+    <td><code class="type">Environment</code></td>
+    <td><p>An environment.</p>
 </td>
 </tr>
   </tbody>
@@ -1046,7 +988,7 @@ combine <code>forEach</code> reducers <em>before</em> parent reducers that can m
 
     <footer>
         <p>
-    Generated on <time datetime="2020-07-29T15:46:33+0000">July 29, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+    Generated on <time datetime="2020-08-10T19:03:04+0000">August 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>

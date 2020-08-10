@@ -111,10 +111,8 @@ protocol:</p>
   <tbody>
     <tr>
     <th>publisher</th>
-    <td><code class="type">P</code></td></td>
-    <td><ul>
-<li>publisher: A publisher.</li>
-</ul>
+    <td><code class="type">P</code></td>
+    <td><p>A publisher.</p>
 </td>
 </tr>
   </tbody>
@@ -142,10 +140,8 @@ protocol:</p>
   <tbody>
     <tr>
     <th>value</th>
-    <td><code class="type">Output</code></td></td>
-    <td><ul>
-<li>value: The value that is immediately emitted by the effect.</li>
-</ul>
+    <td><code class="type">Output</code></td>
+    <td><p>The value that is immediately emitted by the effect.</p>
 </td>
 </tr>
   </tbody>
@@ -173,10 +169,8 @@ protocol:</p>
   <tbody>
     <tr>
     <th>error</th>
-    <td><code class="type">Failure</code></td></td>
-    <td><ul>
-<li>error: The error that is immediately emitted by the effect.</li>
-</ul>
+    <td><code class="type">Failure</code></td>
+    <td><p>The error that is immediately emitted by the effect.</p>
 </td>
 </tr>
   </tbody>
@@ -267,10 +261,8 @@ initializer that accepts a <code>Subscriber</code> value.</p>
   <tbody>
     <tr>
     <th>attempt​ToFulfill</th>
-    <td><code class="type">@escaping (@escaping (Result&lt;Output, Failure&gt;) -&gt; Void) -&gt; Void</code></td></td>
-    <td><ul>
-<li>attemptToFulfill: A closure that takes a <code>callback</code> as an argument which can be used to feed it <code>Result&lt;Output, Failure&gt;</code> values.</li>
-</ul>
+    <td><code class="type">@escaping (@escaping (Result&lt;Output, Failure&gt;) -&gt; Void) -&gt; Void</code></td>
+    <td><p>A closure that takes a <code>callback</code> as an argument which can be used to feed it <code>Result&lt;Output, Failure&gt;</code> values.</p>
 </td>
 </tr>
   </tbody>
@@ -319,10 +311,8 @@ that data back into the store.</p>
   <tbody>
     <tr>
     <th>attempt​ToFulfill</th>
-    <td><code class="type">@escaping () -&gt; Result&lt;Output, Failure&gt;</code></td></td>
-    <td><ul>
-<li>attemptToFulfill: A closure encapsulating some work to execute in the real world.</li>
-</ul>
+    <td><code class="type">@escaping () -&gt; Result&lt;Output, Failure&gt;</code></td>
+    <td><p>A closure encapsulating some work to execute in the real world.</p>
 </td>
 </tr>
   </tbody>
@@ -382,10 +372,8 @@ can request authorization, and once a status is received it can send that back t
   <tbody>
     <tr>
     <th>work</th>
-    <td><code class="type">@escaping (Effect.​Subscriber) -&gt; Cancellable</code></td></td>
-    <td><ul>
-<li>work: A closure that accepts a <code>Subscriber</code> value and returns a cancellable. When the <code>Effect</code> is completed, the cancellable will be used to clean up any resources created when the effect was started.</li>
-</ul>
+    <td><code class="type">@escaping (Effect.​Subscriber) -&gt; Cancellable</code></td>
+    <td><p>A closure that accepts a <code>Subscriber</code> value and returns a cancellable. When the <code>Effect</code> is completed, the cancellable will be used to clean up any resources created when the effect was started.</p>
 </td>
 </tr>
   </tbody>
@@ -420,10 +408,8 @@ one after the other.</p>
   <tbody>
     <tr>
     <th>effects</th>
-    <td><code class="type">Effect</code></td></td>
-    <td><ul>
-<li>effects: A variadic list of effects.</li>
-</ul>
+    <td><code class="type">Effect</code></td>
+    <td><p>A variadic list of effects.</p>
 </td>
 </tr>
   </tbody>
@@ -461,10 +447,8 @@ after the other.</p>
   <tbody>
     <tr>
     <th>effects</th>
-    <td><code class="type">C</code></td></td>
-    <td><ul>
-<li>effects: A collection of effects.</li>
-</ul>
+    <td><code class="type">C</code></td>
+    <td><p>A collection of effects.</p>
 </td>
 </tr>
   </tbody>
@@ -496,10 +480,8 @@ same time.</p>
   <tbody>
     <tr>
     <th>effects</th>
-    <td><code class="type">Effect</code></td></td>
-    <td><ul>
-<li>effects: A list of effects.</li>
-</ul>
+    <td><code class="type">Effect</code></td>
+    <td><p>A list of effects.</p>
 </td>
 </tr>
   </tbody>
@@ -531,10 +513,8 @@ time.</p>
   <tbody>
     <tr>
     <th>effects</th>
-    <td><code class="type">S</code></td></td>
-    <td><ul>
-<li>effects: A sequence of effects.</li>
-</ul>
+    <td><code class="type">S</code></td>
+    <td><p>A sequence of effects.</p>
 </td>
 </tr>
   </tbody>
@@ -566,10 +546,8 @@ back into the store.</p>
   <tbody>
     <tr>
     <th>work</th>
-    <td><code class="type">@escaping () -&gt; Void</code></td></td>
-    <td><ul>
-<li>work: A closure encapsulating some work to execute in the real world.</li>
-</ul>
+    <td><code class="type">@escaping () -&gt; Void</code></td>
+    <td><p>A closure encapsulating some work to execute in the real world.</p>
 </td>
 </tr>
   </tbody>
@@ -600,10 +578,8 @@ back into the store.</p>
   <tbody>
     <tr>
     <th>transform</th>
-    <td><code class="type">@escaping (Output) -&gt; T</code></td></td>
-    <td><ul>
-<li>transform: A closure that transforms the upstream effect's output to a new output.</li>
-</ul>
+    <td><code class="type">@escaping (Output) -&gt; T</code></td>
+    <td><p>A closure that transforms the upstream effect's output to a new output.</p>
 </td>
 </tr>
   </tbody>
@@ -653,18 +629,14 @@ against typos by defining a new type that conforms to <code>Hashable</code>, suc
   <tbody>
     <tr>
     <th>id</th>
-    <td><code class="type">Any​Hashable</code></td></td>
-    <td><ul>
-<li>id: The effect's identifier.</li>
-</ul>
+    <td><code class="type">Any​Hashable</code></td>
+    <td><p>The effect's identifier.</p>
 </td>
 </tr>
 <tr>
     <th>cancel​InFlight</th>
-    <td><code class="type">Bool</code></td></td>
-    <td><ul>
-<li>cancelInFlight: Determines if any in-flight effect with the same identifier should be canceled before starting this new one.</li>
-</ul>
+    <td><code class="type">Bool</code></td>
+    <td><p>Determines if any in-flight effect with the same identifier should be canceled before starting this new one.</p>
 </td>
 </tr>
   </tbody>
@@ -695,10 +667,8 @@ against typos by defining a new type that conforms to <code>Hashable</code>, suc
   <tbody>
     <tr>
     <th>id</th>
-    <td><code class="type">Any​Hashable</code></td></td>
-    <td><ul>
-<li>id: An effect identifier.</li>
-</ul>
+    <td><code class="type">Any​Hashable</code></td>
+    <td><p>An effect identifier.</p>
 </td>
 </tr>
   </tbody>
@@ -744,34 +714,26 @@ struct:</p>
   <tbody>
     <tr>
     <th>id</th>
-    <td><code class="type">Any​Hashable</code></td></td>
-    <td><ul>
-<li>id: The effect's identifier.</li>
-</ul>
+    <td><code class="type">Any​Hashable</code></td>
+    <td><p>The effect's identifier.</p>
 </td>
 </tr>
 <tr>
     <th>due​Time</th>
-    <td><code class="type">S.​Scheduler​Time​Type.​Stride</code></td></td>
-    <td><ul>
-<li>dueTime: The duration you want to debounce for.</li>
-</ul>
+    <td><code class="type">S.​Scheduler​Time​Type.​Stride</code></td>
+    <td><p>The duration you want to debounce for.</p>
 </td>
 </tr>
 <tr>
     <th>scheduler</th>
-    <td><code class="type">S</code></td></td>
-    <td><ul>
-<li>scheduler: The scheduler you want to deliver the debounced output to.</li>
-</ul>
+    <td><code class="type">S</code></td>
+    <td><p>The scheduler you want to deliver the debounced output to.</p>
 </td>
 </tr>
 <tr>
     <th>options</th>
-    <td><code class="type">S.​Scheduler​Options?</code></td></td>
-    <td><ul>
-<li>options: Scheduler options that customize the effect's delivery of elements.</li>
-</ul>
+    <td><code class="type">S.​Scheduler​Options?</code></td>
+    <td><p>Scheduler options that customize the effect's delivery of elements.</p>
 </td>
 </tr>
   </tbody>
@@ -795,7 +757,7 @@ struct:</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-07-29T15:46:33+0000">July 29, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+    Generated on <time datetime="2020-08-10T19:03:04+0000">August 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>
