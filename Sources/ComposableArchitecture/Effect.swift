@@ -244,6 +244,35 @@ public struct Effect<Output, Failure: Error>: Publisher {
     }
     .eraseToEffect()
   }
+   
+    /// Creates an effect that executes some work in the real world that doesn't need to feed data
+    /// back into the store.
+    ///
+    /// For Example
+    ///
+    ///         struct Environment {
+    ///             var save: (String) -> Effect<Response>
+    ///         }
+    ///
+    ///         let environment = Environment {
+    ///             URLSession.shared.dataTaskPublisher(for: url)
+    ///                 .decode(type: Response.self, decoder: jsonDecoder)
+    ///                 .eraseToEffect()
+    ///         }
+    ///
+    ///         /// reducer
+    ///         case let .save(value):
+    ///             /// fireAndForget a network request
+    ///             return env.save(value).fireAndForget()
+    ///
+    /// - Returns: An Effect.
+    ///
+    public func fireAndForget<T>() -> Effect<T, Failure> {
+        flatMap { _ in
+            Empty<T, Failure>(completeImmediately: true)
+        }
+        .eraseToEffect()
+    }
 
   /// Transforms all elements from the upstream effect with a provided closure.
   ///

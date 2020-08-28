@@ -228,4 +228,24 @@ final class ReducerTests: XCTestCase {
       .store(in: &self.cancellables)
     self.wait(for: [expectation], timeout: 0.1)
   }
+    
+    func testFireAndForgetSideEffect() {
+      var state = 0
+
+      struct Environment {
+          var save: (inout Int) -> Effect<Void, Never>
+      }
+
+      let environment = Environment { state in
+          state += 1
+          return Effect(value: ())
+      }
+
+      let reducer = Reducer<Int, Void, Environment> { state, _, env in
+          env.save(&state).fireAndForget()
+      }
+
+      _ = reducer.callAsFunction(&state, (), environment)
+      XCTAssertEqual(state, 1)
+    }
 }
