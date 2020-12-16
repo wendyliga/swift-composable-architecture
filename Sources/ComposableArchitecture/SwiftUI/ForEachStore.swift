@@ -113,6 +113,78 @@ where Data: Collection, ID: Hashable, Content: View {
       }
     }
   }
+  
+  /// Initializes a structure that computes views on demand from a store on an array of data and an
+  /// indexed action.
+  ///
+  /// - Parameters:
+  ///   - store: A store on an array of data and an indexed action.
+  ///   - id: A key path identifying an element.
+  ///   - content: A function that can generate content given a store of an element.
+  public init<EachContent>(
+    _ store: Store<Data, EachAction>,
+    id: KeyPath<EachState, ID>,
+    content: @escaping (Store<EachState, EachAction>) -> EachContent
+  )
+  where
+    Data == [EachState],
+    EachContent: View,
+    Content == WithViewStore<
+      Data, EachAction,
+      ForEach<ContiguousArray<(Data.Index, EachState)>, ID, EachContent>
+    >,
+    EachAction == Never
+  {
+    // help convert back to generic action parent from child action
+    func absurd<A>(_: Never) -> A {}
+    
+    self.data = ViewStore(store, removeDuplicates: { _, _ in false }).state
+    self.content = {
+      WithViewStore(
+        store,
+        removeDuplicates: { lhs, rhs in
+          guard lhs.count == rhs.count else { return false }
+          return zip(lhs, rhs).allSatisfy { $0[keyPath: id] == $1[keyPath: id] }
+        }
+      ) { viewStore in
+        ForEach(
+          ContiguousArray(zip(viewStore.indices, viewStore.state)),
+          id: (\(Data.Index, EachState).1).appending(path: id)
+        ) { index, element in
+          content(
+            store.scope(
+              state: { index < $0.endIndex ? $0[index] : element },
+              action: absurd
+            )
+          )
+        }
+      }
+    }
+  }
+  
+  /// Initializes a structure that computes views on demand from a store on an array of data and an
+  /// indexed action.
+  ///
+  /// - Parameters:
+  ///   - store: A store on an array of data and an indexed action.
+  ///   - content: A function that can generate content given a store of an element.
+  public init<EachContent>(
+    _ store: Store<Data, EachAction>,
+    content: @escaping (Store<EachState, EachAction>) -> EachContent
+  )
+  where
+    Data == [EachState],
+    EachContent: View,
+    Content == WithViewStore<
+      Data, EachAction,
+      ForEach<ContiguousArray<(Data.Index, EachState)>, ID, EachContent>
+    >,
+    EachState: Identifiable,
+    EachState.ID == ID,
+    EachAction == Never
+  {
+    self.init(store, id: \.id, content: content)
+  }
 
   public var body: some View {
     self.content()
